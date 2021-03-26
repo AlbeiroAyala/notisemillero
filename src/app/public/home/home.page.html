@@ -1,0 +1,49 @@
+<div class="mobile">
+  <app-menu *ngIf="toggleMenu" style="transition: 0.5s;"></app-menu>
+  <ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar  color="dark">
+      <ion-title>
+       Notisemillero
+      </ion-title>
+      <ion-title slot="end" (click)="openMenu()">
+        <ion-icon name="menu-outline" class="icon-menu"
+         *ngIf="!toggleMenu; else close"  ></ion-icon>
+        <ng-template #close>
+          <ion-icon name="close-outline" class="icon-menu"></ion-icon>
+        </ng-template>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true" color="dark" >
+
+ 
+
+    <ion-slides  [options]="slideOpts">
+      <ion-slide >
+       
+        <img  src="https://images.unsplash.com/photo-1616591938203-9b5630a01006?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"  width="560" height="440" alt="">
+      </ion-slide>
+      <ion-slide>
+       
+        <img src="https://images.unsplash.com/photo-1616277240960-f68a6b1eaf40?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+      </ion-slide>
+      <ion-slide>
+     
+        <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+      </ion-slide>
+    </ion-slides>
+
+   
+  </ion-content>
+  
+  <p class="text-center">
+    <app-footer  style="position: absolute; bottom: 0;"></app-footer>
+  </p>
+</div>
+
+<div class="desktop">
+  hola esto es un pc
+
+  <button class="btn btn-primary">hello</button>
+</div>

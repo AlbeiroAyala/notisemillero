@@ -1,0 +1,23 @@
+
+<div class="mobile">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>contacto</ion-title>
+      <ion-title slot="end" (click)="openMenu()">menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <app-menu *ngIf="toggleMenu" style="transition: 0.5s;"></app-menu>
+  
+  </ion-content>
+
+</div>
+
+
+<div class="desktop">
+  hola esto es un pc
+
+  <button class="btn btn-primary">hello</button>
+</div>
+
